@@ -9,10 +9,6 @@ app = Flask(__name__)
 def home():
     return "API para prediccion"
 
-@app.route('/api/test', methods=['GET'])
-def test():
-    return "API TEST"
-
 
 @app.route('/api/v1/predict', methods=['GET'])
 def prediction():
