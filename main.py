@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def home():
-    return "API para prediccion"
+    return "<h1>Esto es una API para predecir la venta</h1>"
 
 
 @app.route('/api/v1/predict', methods=['GET'])
@@ -29,7 +29,7 @@ def prediction():
 
     #Devolvemos la prediccion
 
-    return jsonify({"repository":prediction_model[0]})
+    return jsonify({"<h2>La prediccion del valor de la venta es</h2>":prediction_model[0]})
     
 if __name__ == '__main__':
     app.run(debug = True, port=5000)
